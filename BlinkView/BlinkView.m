@@ -35,7 +35,7 @@
     self.updateInterval = 0.2;
     self.gapWidth= 6;
     self.imageRect= CGRectMake(0,4,12, 12);
-
+    
     self.fontSize = 16;
     
     self.textColor= [UIColor colorWithRed:0xfa/255.0 green:0x50/255.0 blue:0x42/255.0 alpha:1];
@@ -73,10 +73,6 @@
     textLayer.contentsScale = [UIScreen mainScreen].scale;
     
     [self.layer addSublayer:textLayer];
-    
-    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(blink:)];
-    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    [displayLink setPaused:YES];
 }
 
 -(CGSize)titleTextSize{
@@ -109,14 +105,13 @@
             
             textLayer.foregroundColor = color.CGColor;
         }
-    }else{
-        [displayLink invalidate];
     }
 }
 
 -(void)animating{
     if(_stopped == YES){
-        [displayLink setPaused:NO];
+        displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(blink:)];
+        [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         
         _stopped = NO;
         [self setNeedsDisplay];
@@ -124,7 +119,7 @@
 }
 -(void)stopAnimating{
     if(_stopped == NO){
-        [displayLink setPaused:YES];
+        [displayLink invalidate];
         
         imageLayer.hidden = YES;
         textLayer.foregroundColor = self.altTextColor.CGColor;
