@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "BlinkView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet BlinkView *blinkView;
 
 @end
 
@@ -25,5 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)action:(id)sender {
+    if(_blinkView.stopped){
+        [_blinkView animating];
+    }else{
+        [_blinkView stopAnimating];
+    }
+}
 
 @end

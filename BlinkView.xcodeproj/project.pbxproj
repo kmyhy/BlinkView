@@ -13,6 +13,9 @@
 		126295931EBAC25400800099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126295911EBAC25400800099 /* Main.storyboard */; };
 		126295951EBAC25400800099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 126295941EBAC25400800099 /* Assets.xcassets */; };
 		126295981EBAC25400800099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126295961EBAC25400800099 /* LaunchScreen.storyboard */; };
+		126295A21EBAC26D00800099 /* BlinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 126295A11EBAC26D00800099 /* BlinkView.m */; };
+		126295A41EBAC54200800099 /* recsmall_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 126295A31EBAC54200800099 /* recsmall_nor@2x.png */; };
+		126295A61EBAC58E00800099 /* recsmall_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 126295A51EBAC58E00800099 /* recsmall_pre@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		126295941EBAC25400800099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		126295971EBAC25400800099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		126295991EBAC25400800099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		126295A01EBAC26D00800099 /* BlinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlinkView.h; sourceTree = "<group>"; };
+		126295A11EBAC26D00800099 /* BlinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlinkView.m; sourceTree = "<group>"; };
+		126295A31EBAC54200800099 /* recsmall_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recsmall_nor@2x.png"; sourceTree = "<group>"; };
+		126295A51EBAC58E00800099 /* recsmall_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recsmall_pre@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 		126295871EBAC25400800099 /* BlinkView */ = {
 			isa = PBXGroup;
 			children = (
+				1262959F1EBAC25C00800099 /* BlinkView */,
 				1262958B1EBAC25400800099 /* AppDelegate.h */,
 				1262958C1EBAC25400800099 /* AppDelegate.m */,
 				1262958E1EBAC25400800099 /* ViewController.h */,
@@ -77,6 +85,17 @@
 				126295891EBAC25400800099 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1262959F1EBAC25C00800099 /* BlinkView */ = {
+			isa = PBXGroup;
+			children = (
+				126295A51EBAC58E00800099 /* recsmall_pre@2x.png */,
+				126295A31EBAC54200800099 /* recsmall_nor@2x.png */,
+				126295A01EBAC26D00800099 /* BlinkView.h */,
+				126295A11EBAC26D00800099 /* BlinkView.m */,
+			);
+			name = BlinkView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				126295981EBAC25400800099 /* LaunchScreen.storyboard in Resources */,
+				126295A41EBAC54200800099 /* recsmall_nor@2x.png in Resources */,
 				126295951EBAC25400800099 /* Assets.xcassets in Resources */,
+				126295A61EBAC58E00800099 /* recsmall_pre@2x.png in Resources */,
 				126295931EBAC25400800099 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				126295901EBAC25400800099 /* ViewController.m in Sources */,
+				126295A21EBAC26D00800099 /* BlinkView.m in Sources */,
 				1262958D1EBAC25400800099 /* AppDelegate.m in Sources */,
 				1262958A1EBAC25400800099 /* main.m in Sources */,
 			);
